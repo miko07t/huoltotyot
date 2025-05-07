@@ -35,7 +35,7 @@ body {
     cursor: pointer;
 }
 .sidebar button:hover {
-    background-color: #4169E1; /* Royal Blue */
+    background-color: #Y20Rr; /* keltainen */
 }
 .content {
     flex-grow: 1;
