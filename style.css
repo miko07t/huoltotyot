@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    background-color: #005b96; /* 🟦 */
+    background-color: #005b96; /* 🔵 */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -21,14 +21,20 @@ body {
 .container {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
 }
 
 .sidebar {
-    background-color: #004b80; /* 🟦 */
+    background-color: #004b80; /* 🔵 */
     padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    align-self: flex-start;
+    z-index: 10;
 }
 
 .sidebar button {
@@ -38,10 +44,12 @@ body {
     font-size: 1.6rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .sidebar button:hover {
-    background-color: #f0f0f0;
+    background-color: #e0e0e0;
+    transform: scale(1.02);
 }
 
 .content {
@@ -61,43 +69,72 @@ body {
 /* Media-laatikoiden ulkoasu */
 .media-boxes {
     display: flex;
-    flex-wrap: wrap; /* mahdollistaa rivittymisen pienellä näytöllä */
+    flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: #4682B4; /* 🟦 */
+    background-color: #4682B4; /* 🔵 */
 }
 
 .media-box {
     background-color: white;
     padding: 0.5rem;
     border: 1px solid #ccc;
-    width: 140px; /* 📏 Pienennetty leveys */
+    width: 140px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s, opacity 0.3s;
 }
 
-.media-box img {
-    width: 70%;
-    height: auto;
+.media-box a {
+    display: block;
+    overflow: hidden;
     border-radius: 4px;
 }
 
-/* Responsiivisuus */
+.media-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.media-box img:hover {
+    transform: scale(1.05);
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+/* Mobiilinäkymä + burger-menu */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
     .sidebar {
-        flex-direction: collum;
-        overflow-x: auto;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #004b80;
+        z-index: 100;
     }
 
-    .sidebar button {
-        flex: 1;
-        font-size: 1rem;
+    .sidebar.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+        background-color: #005b96;
+        color: white;
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+        cursor: pointer;
     }
 
     .media-boxes {
@@ -106,6 +143,11 @@ body {
     }
 
     .media-box {
-        width: 90%; /* Skaalautuu mobiilissa isommaksi */
+        width: 90%;
     }
+}
+
+/* Piilota burger normaalinäytöltä */
+.burger {
+    display: none;
 }
