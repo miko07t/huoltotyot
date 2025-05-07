@@ -109,7 +109,7 @@ body {
         width: 90%;
     }
 }
-taustakuva {
+.taustakuva {
     background-image: url("IMG20250506204319.jpg"); /* Polku oikein lainausmerkeissä */
     background-size: cover;
     background-position: center;
