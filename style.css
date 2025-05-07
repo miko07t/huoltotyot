@@ -109,3 +109,32 @@ body {
         width: 90%;
     }
 }
+.taustakuva {
+    background-image: url("IMG20250506204319.jpg"); /* Vaihda polku oikeaksi */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.taustakuva::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Tummentaa kuvan tekstin takaa */
+    z-index: 1;
+}
+
+.taustakuva h1,
+.taustakuva p {
+    position: relative;
+    z-index: 2;
+}
