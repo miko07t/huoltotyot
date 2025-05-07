@@ -4,10 +4,12 @@
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
 body {
     background-color: #f9f9f9;
     color: #333;
 }
+
 .header {
     background-color: #005b96; /* 🟦 */
     color: white;
@@ -15,10 +17,12 @@ body {
     text-align: center;
     font-size: 1.5rem;
 }
+
 .container {
     display: flex;
     flex-direction: row;
 }
+
 .sidebar {
     background-color: #004b80; /* 🟦 */
     padding: 1rem;
@@ -26,61 +30,82 @@ body {
     flex-direction: column;
     gap: 10px;
 }
+
 .sidebar button {
-    background-color: #FFFF;
+    background-color: #fff;
     border: none;
     padding: 15px;
     font-size: 1.6rem;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .sidebar button:hover {
-    background-color: #FFFF; /* valkoinen */
+    background-color: #f0f0f0;
 }
+
 .content {
     flex-grow: 1;
     padding: 1rem;
     min-height: 200px;
 }
+
 .green-box {
-    background-color: #0000; /* valkoinen */
+    background-color: #fff;
 }
+
 .purple-box {
-    background-color: #0000; /* white */
+    background-color: #fff;
 }
+
+/* Media-laatikoiden ulkoasu */
 .media-boxes {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* mahdollistaa rivittymisen pienellä näytöllä */
+    justify-content: center;
+    gap: 1rem;
     padding: 1rem;
     background-color: #4682B4; /* 🟦 */
 }
+
 .media-box {
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    width: 30%;
+    width: 180px; /* 📏 Pienennetty leveys */
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.media-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 /* Responsiivisuus */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+
     .sidebar {
         flex-direction: row;
         overflow-x: auto;
     }
+
     .sidebar button {
         flex: 1;
         font-size: 1rem;
     }
+
     .media-boxes {
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
     }
+
     .media-box {
-        width: 100%;
+        width: 90%; /* Skaalautuu mobiilissa isommaksi */
     }
 }
