@@ -35,7 +35,7 @@ body {
     cursor: pointer;
 }
 .sidebar button:hover {
-    background-color: #Y20Rr; /* keltainen */
+    background-color: #0000; /* valkoinen */
 }
 .content {
     flex-grow: 1;
