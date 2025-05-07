@@ -91,7 +91,7 @@ body {
     }
 
     .sidebar {
-        flex-direction: row;
+        flex-direction: collum;
         overflow-x: auto;
     }
 
