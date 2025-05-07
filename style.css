@@ -5,11 +5,11 @@
     font-family: Arial, sans-serif;
 }
 body {
-    background-color: #f0f8ff;
+    background-color: #f9f9f9;
     color: #333;
 }
 .header {
-    background-color: #cc0000; /* 🟥 */
+    background-color: #005b96; /* 🟥 */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -20,7 +20,7 @@ body {
     flex-direction: row;
 }
 .sidebar {
-    background-color: #ffa500; /* 🟧 */
+    background-color: #004b80; /* 🟧 */
     padding: 1rem;
     display: flex;
     flex-direction: column;
