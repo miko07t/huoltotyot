@@ -52,7 +52,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding: 1rem;
-    background-color: #0000; /* 🟦 */
+    background-color: #4682B4; /* 🟦 */
 }
 .media-box {
     background-color: white;
