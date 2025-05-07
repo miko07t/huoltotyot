@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">Tervetuloa huoltopalveluihimme!</header>
+    <header class="header">
+        <span>Tervetuloa huoltopalveluihimme!</span>
+        <button class="burger" onclick="toggleSidebar()">☰</button>
+    </header>
+
     <div class="container">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
             <button onclick="showContent('etusivu')">Etusivu</button>
             <button onclick="showContent('ilmalampopumppu')">Ilmalämpöpumpun pesu</button>
             <button onclick="showContent('autohuolto')">Autohuollot</button>
@@ -21,25 +25,12 @@
             <p>Tervetuloa! Tarjoamme laadukkaita huoltopalveluita mobiilisti ja nopeasti.</p>
         </main>
     </div>
+
     <div class="media-boxes">
-        <div class="media-box">
-            <img src="sisäulko.jpg.webp" alt="Ilmalämpöpumppu" style="width: 100%; height: auto;">
-        </div>
-        <div class="media-box">
-            <img src="IMG20250505204215.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
-        </div>
-        <div class="media-box">
-            <img src="IMG20250505200223.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
-        </div>
-        <div class="media-box">
-            <img src="IMG20250505202023.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
-            </div>
-        <div class="media-box">
-            <img src="IMG20250505202750.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
-            </div>
-        <div class="media-box">
-            <img src="IMG20250506204319.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        <div class="media-box"><img src="sisäulko.jpg.webp" alt="Ilmalämpöpumppu" style="width: 100%; height: auto;"></div>
+        <div class="media-box"><img src="IMG20250505204215.jpg" alt="Auton sisätila" style="width: 100%; height: auto;"></div>
+        <div class="media-box"><img src="IMG20250505200223.jpg" alt="Auton sisätila" style="width: 100%; height: auto;"></div>
+        <div class="media-box"><img src="IMG20250505202023.jpg" alt="Auton sisätila" style="width: 100%; height: auto;"></div>
+        <div class="media-box"><img src="IMG20250505202750.jpg" alt="Auton sisätila" style="width: 100%; height: auto;"></div>
+        <div class="media-box"><img src="IMG20250506204319.jpg" alt="Auton sisätila" style="width: 100%; height: auto;"></div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
