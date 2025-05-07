@@ -110,7 +110,7 @@ body {
     }
 }
 .taustakuva {
-    background-image: url("IMG20250506204319.jpg"); /* Vaihda polku oikeaksi */
+    background-image: url(IMG20250506204319.jpg); /* Vaihda polku oikeaksi */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
