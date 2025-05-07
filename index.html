@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Palvelusivu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palvelusivu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    Tervetuloa huoltopalveluihimme!
-    <button class="burger" onclick="toggleMenu()">☰ Menu</button>
-  </header>
-
-  <div class="container">
-    <nav class="sidebar">
-      <button onclick="showContent('etusivu')">Etusivu</button>
-      <button onclick="showContent('ilmalampopumppu')">Ilmalämpöpumpun pesu</button>
-      <button onclick="showContent('autohuolto')">Autohuollot</button>
-      <button onclick="showContent('ikkunanpesu')">Ikkunan pesu</button>
-      <button onclick="showContent('yhteystiedot')">Yhteystiedot</button>
-    </nav>
-
-    <main id="content" class="content green-box">
-      <h2>Etusivu</h2>
-      <p>Tervetuloa! Tarjoamme laadukkaita huoltopalveluita mobiilisti ja nopeasti.</p>
-    </main>
-  </div>
-
-  <div class="media-boxes">
-    <div class="media-box">
-      <a href="#autohuolto" onclick="showContent('autohuolto')">
-        <img src="IMG20250505204215.jpg" alt="Auton sisätila">
-      </a>
+    <header class="header">Tervetuloa huoltopalveluihimme!</header>
+    <div class="container">
+        <nav class="sidebar">
+            <button onclick="showContent('etusivu')">Etusivu</button>
+            <button onclick="showContent('ilmalampopumppu')">Ilmalämpöpumpun pesu</button>
+            <button onclick="showContent('autohuolto')">Autohuollot</button>
+            <button onclick="showContent('ikkunanpesu')">Ikkunan pesu</button>
+            <button onclick="showContent('yhteystiedot')">Yhteystiedot</button>
+        </nav>
+        <main id="content" class="content green-box">
+            <h2>Etusivu</h2>
+            <p>Tervetuloa! Tarjoamme laadukkaita huoltopalveluita mobiilisti ja nopeasti.</p>
+        </main>
     </div>
-    <div class="media-box">
-      <a href="#ilmalampopumppu" onclick="showContent('ilmalampopumppu')">
-        <img src="sisäulko.jpg.webp" alt="Ilmalämpöpumppu">
-      </a>
+    <div class="media-boxes">
+        <div class="media-box">
+            <img src="sisäulko.jpg.webp" alt="Ilmalämpöpumppu" style="width: 100%; height: auto;">
+        </div>
+        <div class="media-box">
+            <img src="IMG20250505204215.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        </div>
+        <div class="media-box">
+            <img src="IMG20250505200223.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        </div>
+        <div class="media-box">
+            <img src="IMG20250505202023.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        </div>
+        <div class="media-box">
+            <img src="IMG20250505202750.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        </div>
+        <div class="media-box">
+            <img src="IMG20250506204319.jpg" alt="Auton sisätila" style="width: 100%; height: auto;">
+        </div>
     </div>
-    <!-- Lisää lisää kuvia samalla rakenteella -->
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
